@@ -41,11 +41,9 @@ def main():
             decision = result["EvalDecision"]
 
             if decision == "allowed":
-                # РАЗРЕШЕНО — с большой зелёной галочкой сразу после действия
                 print(f"Permission: {action}      РАЗРЕШЕНО")
                 print(json.dumps(response["EvaluationResults"], indent=2, ensure_ascii=False))
             else:
-                # ЗАПРЕЩЕНО — коротко и без JSON
                 print(f"{action}")
                 if decision == "explicitDeny":
                     print("   ЗАПРЕЩЕНО (явно)")
