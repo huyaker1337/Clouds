@@ -18,7 +18,7 @@ This script uses that secret API to check a whole list of actions and shows you 
 - Actions that are ALLOWED → full JSON + the word РАЗРЕШЕНО right next to the permission  
   You immediately see which policy gave the permission (very useful for audits and pentests)
 
-- Actions that are DENIED → just one short line “ЗАПРЕЩЕНО (implicit)” or “ЗАПРЕЩЕНО (explicit)”  
+- Actions that are DENIED → just one short line “ЗАПРЕЩЕНО (неявно)” or “ЗАПРЕЩЕНО (явно)”  
 
 ### How to use it (Unix)
 
