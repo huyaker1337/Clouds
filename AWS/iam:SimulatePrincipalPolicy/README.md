@@ -48,7 +48,7 @@ python3 SimulatePrincipalPolicy.py --user-name DevAppUser --account 058264439561
 ### How to use it (Windows)
 
 1. Save the script as `SimulatePrincipalPolicy.ps1`
-2. 2. Create a file `policy.txt` with actions you want to test (one per line), example:
+2. Create a file `policy.txt` with actions you want to test (one per line), example:
 ```text
 iam:PutUserPolicy
 iam:PutRolePolicy
