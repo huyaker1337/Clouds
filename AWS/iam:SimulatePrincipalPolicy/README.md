@@ -20,11 +20,10 @@ This script uses that secret API to check a whole list of actions and shows you 
 
 - Actions that are DENIED → just one short line “ЗАПРЕЩЕНО (implicit)” or “ЗАПРЕЩЕНО (explicit)”  
 
-### How to use it (step by step)
+### How to use it (Unix)
 
 1. Save the script as `SimulatePrincipalPolicy.py`
 2. Create a file `policy.txt` with actions you want to test (one per line), example:
-
 ```text
 iam:PutUserPolicy
 iam:PutRolePolicy
@@ -46,3 +45,27 @@ python3 SimulatePrincipalPolicy.py --user-name DevAppUser --account 058264439561
 ```
 <img width="868" height="510" alt="image" src="https://github.com/user-attachments/assets/558a3d5b-ad2a-4601-ab96-bc9315fd2e60" />
 
+### How to use it (Windows)
+
+1. Save the script as `SimulatePrincipalPolicy.ps1`
+2. 2. Create a file `policy.txt` with actions you want to test (one per line), example:
+```text
+iam:PutUserPolicy
+iam:PutRolePolicy
+iam:CreatePolicy
+iam:AttachUserPolicy
+iam:CreateAccessKey
+sts:AssumeRole
+lambda:UpdateFunctionCode
+lambda:InvokeFunction
+iam:UpdateAssumeRolePolicy
+s3:ListBucket
+s3:GetObject
+iam:CreateUser
+ec2:StartInstance
+```
+3. Run it (you need a profile that has iam:SimulatePrincipalPolicy permission — usually SecurityAudit or admin works):
+```powershell
+.\SimulatePrincipalPolicy.ps1
+```
+<img width="510" height="878" alt="image" src="https://github.com/user-attachments/assets/e382c6b6-9213-4336-853e-4b8165d7f410" />
